@@ -73,7 +73,7 @@ export default function Navbar(props: any) {
                 <div className="md:hidden">
                     <div
                         id="menu"
-                        className={close ? "hidden" : "absolute z-10 flex flex-col items-center self-end py-8 mt-10 space-y-6 bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"}
+                        className={close ? "hidden" : "absolute z-10 flex flex-col items-center self-end py-8 mt-10 space-y-6 bg-white sm:w-auto sm:self-center left-6 right-6"}
                     >
                         <Link href="/"
                             className={currentRoute === "/"
