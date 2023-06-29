@@ -9,7 +9,7 @@ import {
     faHeartCircleMinus, faHeartCirclePlus, faHeartCircleCheck
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Card({ id, name, url, favorite, onImageClick, update }: { id: string, name: string, url: string, favorite: boolean, onImageClick?: () => void, update: (memes: MemeType[]) => void }) {
+export default function Card({ id, name, url, favorite, onImageClick, update }: { id: string, name: string, url: string, favorite: boolean, onImageClick?: () => void, update?: (memes: MemeType[]) => void }) {
     // console.log(onImageClick)
     const [icon, setIcon] = useState(favorite ? faHeartCircleCheck : faHeartCirclePlus);
     const [fav, setFav] = useState(favorite ? true : false);
