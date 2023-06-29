@@ -5,6 +5,7 @@ import { useState, useEffect, useContext, useCallback } from 'react';
 import { MemesDataContext, MemeType } from '@/app/memesDataContext';
 import ReactPaginate from 'react-paginate';
 import MyItems from '@/app/favorites/myItems';
+import Box from '@/components/Box';
 
 
 export default function MyMemes({ itemsPerPage }: { itemsPerPage: number }) {
@@ -68,7 +69,7 @@ export default function MyMemes({ itemsPerPage }: { itemsPerPage: number }) {
         <h1>My Favorites</h1>
       </div>
 
-      {myMemes?.length === 0 ? "Please check out your favoriate memes from home page." :
+      {myMemes?.length === 0 ? <Box>Please check out your favoriate memes from home page.</Box> :
         <div className='space-y-5'>
           <ReactPaginate
             breakLabel="..."
@@ -87,7 +88,7 @@ export default function MyMemes({ itemsPerPage }: { itemsPerPage: number }) {
             nextLinkClassName='inline-block w-max'
             activeClassName="bg-gray-300"
             activeLinkClassName="text-slate-900 font-bold text-xl"
-            forcePage={pageCount>0?page:-1}
+            forcePage={pageCount > 0 ? page : -1}
           />
           <MyItems currentItems={currentItems} />
           <ReactPaginate
@@ -107,7 +108,7 @@ export default function MyMemes({ itemsPerPage }: { itemsPerPage: number }) {
             nextLinkClassName='inline-block w-max'
             activeClassName="bg-gray-300"
             activeLinkClassName="text-slate-900 font-bold text-xl"
-            forcePage={pageCount>0?page:-1}
+            forcePage={pageCount > 0 ? page : -1}
           />
         </div>}
 
