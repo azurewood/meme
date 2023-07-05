@@ -52,7 +52,7 @@ export default function Card({ id, name, url, favorite, onImageClick, update }: 
 
     return (
         <>
-            <div onClick={onImageClick} className="rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30">
+            <div onClick={onImageClick} className="shadow-none transition-all duration-300 ease-in-out hover:border-4 hover:border-pink-500/30">
                 <h4>{name}</h4>
                 <Image
                     src={url}
