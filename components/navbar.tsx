@@ -42,7 +42,7 @@ export default function Navbar(props: any) {
                             className={currentRoute === "/favorites"
                                 ? "font-bold"
                                 : "hover:font-bold"}>
-                            Favarites
+                            Favorites
                         </Link>
                         <Link href="/about"
                             className={currentRoute === "/about"
